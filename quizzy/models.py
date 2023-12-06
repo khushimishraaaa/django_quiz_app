@@ -2,16 +2,12 @@ from django.db import models
 import uuid
 import random
 
-# Create your models here.
 
 class Basemodel(models.Model):
     uid= models.UUIDField(primary_key=True, default=uuid.uuid4)   
 
     class META:
         abstract = True
-    
-
-
     
 class Category(Basemodel ):
     category_name = models.TextField()

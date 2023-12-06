@@ -25,6 +25,7 @@
             </div>
             <hr>
             <button class="btn btn-primary" @click="submitQuiz">Submit Quiz</button>
+            <a href="{% url 'log-out' %}">LOGOUT?</a>
         </div>
     </div>
 </div>
@@ -58,10 +59,10 @@
                     question.answers.forEach(answer => {
                         if (answer.answer_text === event.target.value) {
                             if (answer.is_correct) {
-                                alert("Your answer is correct");
+                                
                                 this.totalMarks += question.marks;  
                             } else {
-                                alert("Wrong answer");
+                                
                             }
                         }
                     });
